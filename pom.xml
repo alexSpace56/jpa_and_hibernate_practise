@@ -11,6 +11,7 @@
     <modules>
         <module>jpa</module>
         <module>hibernate</module>
+        <module>spring-jpa</module>
     </modules>
 
     <properties>
