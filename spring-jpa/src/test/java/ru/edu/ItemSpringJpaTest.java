@@ -40,4 +40,20 @@ public class ItemSpringJpaTest {
         );
 
     }
+
+
+    @Test
+    public void testManualQuery(){
+        Item item = Item.builder()
+                .name("Alex")
+                .details("Human").build();
+
+        itemRepository.save(item);
+
+        List<Item> alex = itemRepository.findByName("Alex");
+
+        assertEquals("Alex", alex.get(0).getName());
+
+    }
+
 }
